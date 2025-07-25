@@ -1,0 +1,19 @@
+{
+  "name": "jobone",
+  "version": "1.0.0",
+  "main": "candidate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Megha77645/Jobone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Megha77645/Jobone/issues"
+  },
+  "homepage": "https://github.com/Megha77645/Jobone#readme",
+  "description": ""
+}
