@@ -1,0 +1,486 @@
+:root {
+  --primary: #0099ff;
+  --gradient: linear-gradient(90deg, #0099ff 20%, #005bea 100%);
+  --form-bg: #fff;
+  --form-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
+  --card-shadow: 0 1px 8px 0 rgba(0,0,0,0.10);
+  --border-radius: 18px;
+  --form-radius: 16px;
+  --input-bg: #f8fafc;
+  --input-border: #e0e0e0;
+  --font-main: 'Inter', Arial, sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter var', sans-serif;
+  background: #f8fafc;
+}
+
+.main-bg {
+  background: #f8fafc;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.main-bg:before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: #eaf6ff;
+  clip-path: ellipse(90% 60% at 10% 0%);
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.left-section {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 40px;
+  min-width: 0;
+}
+.hero-text {
+  margin-bottom: 400px;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0;
+  color: #222;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.faster-gradient {
+  font-weight: 800;
+  font-style: italic;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-text p {
+  font-size: 1.35rem;
+  color: #333;
+  margin: 24px 0 0 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+.hero-image-area {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  margin-top: 36px;
+  min-height: 320px;
+  justify-content: center;
+}
+
+.hero-img {
+  width: 420px;
+  max-width: 95%;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+  display: block;
+  margin: 0 auto;
+}
+
+.profiles-cards {
+  position: absolute;
+  left: 60%;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.profile-card {
+  min-width: 220px;
+  background: #fff;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--card-shadow);
+  padding: 8px 16px 8px 8px;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.profile-card .profile-photo {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #e0e0e0;
+  flex-shrink: 0;
+}
+
+.profile-card .profile-photo img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+.profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.profile-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #282828;
+}
+
+.profile-stars {
+  color: #fabb05;
+  font-size: 0.95em;
+  letter-spacing: 1.2px;
+}
+
+.hired-tag {
+  display: inline-block;
+  background: #21c87a;
+  color: #fff;
+  font-size: 0.85em;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 1px 9px;
+  margin-top: 3px;
+  margin-left: 0;
+}
+
+.profile-card.hired .hired-tag {
+  margin-left: 0;
+}
+
+/* FORM BOX */
+.right-section {
+  flex: 1 1 38%;
+  background: var(--form-bg);
+  box-shadow: var(--form-shadow);
+  border-radius: var(--form-radius);
+  padding: 32px 30px 28px 30px;
+  max-width: 320px;
+  max-height: 450px;
+  min-width: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 24px;
+  margin-top: 85px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #222;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.req {
+  color: #e33;
+  margin-left: 2px;
+  font-size: 1.05em;
+}
+
+.form-group input {
+  padding: 12px;
+  border: 1px solid var(--input-border);
+  background: var(--form-bg);
+  border-radius: 3px;
+  font-size: 1.05rem;
+  outline: none;
+  transition: border .2s;
+  height: 30%;
+}
+
+.name-group input{
+  padding: 12px;
+  border: 1px solid var(--input-border);
+  border-radius: 3px;
+  font-size: 1rem;
+  background:var(--form-bg);
+  outline: none;
+  transition: border .2s;
+  width:84%;
+  height: 30%;
+}
+.last-group input {
+  padding: 12px;
+  border: 1px solid var(--input-border);
+  border-radius: 3px;
+  font-size: 1rem;
+  background:var(--form-bg);
+  outline: none;
+  transition: border .2s;
+  width:84%;
+  height: 30%;
+}
+
+.last-group{
+    margin-left: 5px;
+}
+
+.form-group input:focus,
+.name-group input:focus,
+.last-group input:focus {
+  border-color: var(--primary);
+}
+
+.form-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.form-row .form-group,
+.form-row .name-group,
+.form-row .last-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.mobile-row {
+  display: block;
+  width: 93%;
+}
+
+.country-code {
+  display: none;
+}
+
+#mobile {
+  border-radius: 3px;
+  border: 1px solid var(--input-border);
+  width: 100%;
+  height: auto;
+  padding: 12px;
+  font-size: 1rem;
+  background: var(--form-bg);
+  margin-left: 0;
+}
+
+.form-tc {
+  font-size: 0.96rem;
+  margin-bottom: 18px;
+  color: #666;
+}
+
+.form-tc a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.post-btn {
+  width: 100%;
+  background: var(--gradient);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 0;
+  font-size: 1.13rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: background .18s;
+}
+
+.post-btn:hover {
+  background: linear-gradient(90deg, #0075c9 30%, #005bea 100%);
+}
+
+.login-link {
+  text-align: center;
+  font-size: 1rem;
+  color: #444;
+}
+
+.login-link a {
+  color: var(--primary);
+  text-decoration: underline;
+  margin-left: 2px;
+}
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px 10px 10px 10px;
+  }
+  .left-section, .right-section {
+    min-width: 0;
+    max-width: 100%;
+    margin-left: 0;
+    padding-top: 0;
+  }
+  .right-section {
+    margin: 24px auto 0 auto;
+    width: 100%;
+    max-width: 360px;
+    min-width: 0;
+    padding: 20px 8px;
+  }
+  .last-group input {
+    width: 86%;
+  }
+  .hero-img {
+    width: 320px;
+  }
+  .profiles-cards {
+    left: 56%;
+    top: 30px;
+  }
+  .hero-text h1, .hero-text p {
+    text-align: center;
+  }
+  .hero-text {
+    margin-bottom: 40px;
+  }
+}
+
+/* Large mobile and small tablet screens */
+@media (max-width: 700px) {
+  .container {
+    padding: 10px 0 0 0;
+  }
+  .left-section {
+    padding-top: 8px;
+  }
+  .hero-text h1 {
+    font-size: 2.0rem;
+  }
+  .hero-text p {
+    font-size: 1.1rem;
+    margin-top: 14px;
+  }
+  .hero-img {
+    width: 95vw;
+    min-width: 0;
+    max-width: 97vw;
+    border-radius: 13px;
+  }
+  .profiles-cards {
+    left: 55%;
+    top: 18px;
+    min-width: 140px;
+    gap: 10px;
+  }
+  .right-section {
+    padding: 10px 5px;
+    max-width: 55vw;
+    padding: 20px;
+  }
+    .last-group input {
+    width: 88%;
+  }
+  .mobile-row {
+  display: block;
+  width: 94%;
+}
+
+}
+
+/* All mobile screens */
+@media (max-width: 480px) {
+  .main-bg:before {
+    clip-path: ellipse(110% 60% at 10% 0%);
+  }
+  .hero-img {
+    width: 99vw;
+    border-radius: 13px;
+  }
+  .profiles-cards {
+    left: 50%;
+    top: 10px;
+    min-width: 100px;
+    gap: 7px;
+  }
+  .profile-card {
+    min-width: 100px;
+    padding: 6px 8px 6px 6px;
+  }
+  .right-section {
+    padding: 8px 2px;
+    max-width: 75vw;
+    padding: 20px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+      .last-group input {
+    width: 86%;
+  }
+  .mobile-row {
+  display: block;
+  width: 93%;
+}
+  .form-group input,
+  .name-group input,
+  .last-group input,
+  #mobile {
+    font-size: 0.96rem;
+    padding: 10px;
+  }
+  .hero-text h1 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+  .hero-text p {
+    font-size: 0.95rem;
+    margin-top: 5px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 350px) {
+  .right-section {
+    padding: 4px 0;
+    max-width: 75vw;
+    padding: 20px;
+  }
+  .form-group input,
+  .name-group input,
+  .last-group input,
+  #mobile {
+    font-size: 0.92rem;
+    padding: 8px;
+  }
+  .hero-text h1 {
+    font-size: 1.1rem;
+  }
+  .hero-text p {
+    font-size: 0.85rem;
+  }
+}
+
+::-webkit-input-placeholder { color: #aaa; }
+::-moz-placeholder { color: #aaa; }
+:-ms-input-placeholder { color: #aaa; }
+::placeholder { color: #aaa; }

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companies | Job Portal</title>
+    <link rel="stylesheet" href="Employer.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <style>
+    @media (max-width:950px){
+       .access{
+        height: 40px;
+        width: 90%;
+        text-align: center;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+            <header>
+            <div class="header-container">
+                <span class="logo">First Job Portal</span>
+                
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <nav class="nav-menu" id="navMenu">
+                    <span class="menu">
+                        <a href="index.html">Home</a>
+                    </span>
+                    <span class="menu">
+                        <a href="findjob.html">Find Jobs</a>
+                    </span>
+                    <span class="menu">
+                        <a href="Employer.html">Employers</a>
+                    </span>
+                    <span class="menu">
+                        <a href="candidate.html">Candidates</a>
+                    </span>
+                    <span class="menu pages-dropdown">
+                        <a href="#" class="pages-dropdown-toggle">Pages <i class="fas fa-chevron-down"></i></a>
+                        <div class="pages-dropdown-content">
+                            <div class="border"></div>
+                            <a href="About(1).html">About Us</a>
+                            <a href="FAQ's.html">FAQ's</a>
+                            <a href="terms-and-conditions.html">Terms & Conditions</a>
+                            <a href="contact.html">Contact Us</a>
+                        </div>
+                    </span>
+                    
+                    <div class="header-buttons">
+                        <span class="files upload">
+                            <a href="upload_cv.html">Upload Your CV</a>
+                        </span>
+                        <span class="files access">
+                            <a href="login.html">Login</a>
+                        </span>
+                        <span class="files access">
+                            <a href="jobPortal/application_form.html">SignUp</a>
+                        </span>
+                        <span class="files access job-post">
+                            <a href="job post page/Jobpost.html">Job Post</a>
+                        </span>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    <div class="jphd-main-header-239v">
+        <div class="jphd-header-content-239v">
+            <h1>Companies</h1>
+            <nav>
+                <a href="index.html">Home</a> / <span>Companies</span>
+            </nav>
+        </div>
+    </div>
+    <main>
+        <div class="jphd-container-239v">
+            <aside class="jphd-sidebar-239v">
+               <button type="button" id="jphd-filter-close-239v" class="jphd-filter-close-239v" aria-label="Close filters">&times;</button>
+               <!-- ...rest of sidebar... -->
+                <form id="jphd-filter-form-239v">
+                    <div class="jphd-form-section-239v">
+                        <label class="jphd-section-title-239v">Search by Keywords</label>
+                        <div class="jphd-input-icon-239v">
+                            <span class="jphd-icon-239v"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            <input type="text" id="jphd-keyword-239v" placeholder="Job title, keywords, or company">
+                        </div>
+                    </div>
+                    <div class="jphd-form-section-239v">
+                        <label class="jphd-section-title-239v">Location</label>
+                        <div class="jphd-input-icon-239v">
+                            <span class="jphd-icon-239v"><i class="fa-solid fa-location-dot"></i></span>
+                            <input type="text" id="jphd-location-239v" placeholder="City or postcode">
+                        </div>
+                        <div class="jphd-slider-group-239v">
+                            <!-- <label for="jphd-radius-239v">Radius around selected destination</label>
+                            <input type="range" id="jphd-radius-239v" min="1" max="100" value="100" step="1" >
+                            <span class="jphd-slider-value-239v" id="jphd-radius-value-239v">100km</span> -->
+                        </div>
+                    </div>
+                    <div class="jphd-form-section-239v">
+                        <label class="jphd-section-title-239v">Category</label>
+                        <div class="jphd-input-icon-239v">
+                            <span class="jphd-icon-239v">&#128188;</span>
+                            <select id="jphd-category-239v">
+                                <option value="">Choose a category</option>
+                                <option value="Accounting / Finance">Accounting / Finance</option>
+                                <option value="Design">Design</option>
+                                <option value="Engineering">Engineering</option>
+                                <option value="Sales">Sales</option>
+                                <option value="Marketing">Marketing</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="jphd-form-section-239v">
+                        <label class="jphd-section-title-239v">Foundation Date</label>
+                        <div class="jphd-slider-group-239v">
+                            <input type="range" id="jphd-foundation-start-239v" min="1900" max="2028" value="1900" step="1">
+                            <input type="range" id="jphd-foundation-end-239v" min="1900" max="2028" value="2028" step="1">
+                            <span class="jphd-slider-value-239v" id="jphd-foundation-value-239v">1900 - 2028</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="jphd-search-btn-239v">Search</button>
+                </form>
+                <div class="jphd-recruit-section-239v">
+                    <h3>Recruiting?</h3>
+                    <p>Advertise your jobs to millions of monthly users and search 15.8 million CVs in our database.</p>
+                   <a href="Employer.html"> <button class="jphd-recruit-btn-239v">Start Recruiting Now</button></a>
+                </div>
+            </aside>
+            <section class="jphd-main-content-239v">
+                <div class="jphd-toolbar-239v">
+                    <span class="jphd-job-count-239v" id="jphd-job-count-239v">20 jobs</span>
+                        <button id="jphd-filter-toggle-239v" class="jphd-filter-toggle-239v" aria-label="Show filters">
+                          <i class="fa fa-sliders-h"></i> Filter
+                        </button>
+                    <select id="jphd-sort-by-239v">
+                        <option value="default">Sort by (default)</option>
+                        <option value="name-asc">Company Name (A-Z)</option>
+                        <option value="jobs-desc">Most Open Jobs</option>
+                    </select>
+                    <select id="jphd-filter-category-239v">
+                        <option value="">All</option>
+                        <option value="Accounting / Finance">Accounting / Finance</option>
+                        <option value="Design">Design</option>
+                        <option value="Engineering">Engineering</option>
+                    </select>
+                </div>
+                <div id="jphd-company-list-239v" class="jphd-company-list-239v">
+                    <!-- Company cards rendered here -->
+                </div>
+            </section>
+        </div>
+        <!-- Modal for details -->
+        <div id="jphd-modal-239v" class="jphd-modal-239v" >
+            <div class="jphd-modal-content-239v" id="jphd-modal-content-239v">
+                <!-- Modal content rendered here -->
+            </div>
+        </div>
+    </main>
+    <button class="jphd-scroll-top-239v" id="jphd-scroll-top-239v">&#8679;</button>
+         <footer class="superio-footer">
+    <div class="footer-main">
+      <div class="footer-logo-block">
+        <span class="logo  -title">First Job Portal</span>
+        <div class="footer-contact">
+          <div class="call-us">Call us</div>
+          <a class="phone" href="tel:1234567890">123 456 7890</a>
+          <div class="address">
+            329 Queensberry Street, North Melbourne VIC 3051, Australia.
+          </div>
+          <div class="email">support@firstjobportal.com</div>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <div class="footer-title">For Candidates</div>
+        <ul>
+          <li><a href="candidate.html">Browse Candidates</a></li>
+          <li><a href="findjob.html">Browse Jobs</a></li>
+          <li><a href="index.html#job-categories-main-body">Browse Categories</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <div class="footer-title">For Employers</div>
+        <ul>
+          <li><a href="Employer.html">Browse Employers</a></li>
+          <li><a href="findjob.html">Browse Jobs</a></li>
+          <li><a href="index.html#job-categories-main-body">Browse Categories</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <div class="footer-title">About Us</div>
+        <ul>
+          <li><a href="About(1).html">About Us</a></li>
+          <li><a href="terms-and-conditions.html">Terms Page</a></li>
+          <li><a href="FAQ's.html">FAQ's</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <div class="footer-title">Helpful Resources</div>
+        <ul>
+          <li><a href="#">Site Map</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Center</a></li>
+          <li><a href="#">Security Center</a></li>
+          <li><a href="#">Accessibility Center</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 First Job Portal by Simtrak Solutions</span>
+      <div class="footer-bottom-group">
+        <div class="footer-socials">
+          <a href="#" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="footer-social" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+          <a href="#" class="footer-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="footer-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <button class="scroll-to-top" id="scrollTopBtn" title="Go to top">
+          <svg width="32" height="32" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="12" fill="#f2f6ff" />
+            <polyline points="16 14 12 10 8 14" fill="none" stroke="#3664f5" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+    <script src="Employer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+body{
+    background-color: rgb(247, 244, 241);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.resume-main-container{
+    height:550px;
+    width:700px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-left: 27%;
+    margin-top:5%;
+    padding-top: 20px;
+    border-radius: 20px;
+
+}
+.resume-container{
+    text-align: center;
+    margin-top: 50px;
+
+}
+.resume-btn{
+    border-radius: 5px;
+    height: 40px;
+    width: 90%;
+    background-color:#1665e3;
+    margin-top: 20px;
+    margin-left: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    color: white;
+    letter-spacing: 1px;
+    border: 0px;
+}
+.resume-btn:hover{
+    background: #07398b;
+}
+#file{
+    font-size: 15px;
+    position: relative;
+    left: 60px;
+}
+.resume-tiltle{
+    text-align: left;
+    position: relative;
+    top: 5px;
+    left: 20px;
+    margin-right: 40px;
+    
+}
+
+.jobtype_heading .prev-btn {
+    
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+@media (max-width: 1024px) {
+    .resume-main-container {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .resume-btn {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .resume-tiltle {
+        font-size: 20px;
+        left: 15px;
+    }
+    #file {
+        left: 30px;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .resume-main-container {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .resume-btn {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .resume-tiltle {
+        font-size: 18px;
+        left: 10px;
+    }
+    #file {
+        left: 20px;
+    }
+.img-subtaxt{
+    font-size: 12px;
+    color: black;
+    margin-top: 5px;
+   
+}
+
+.resume-heading{
+    text-align: center;
+    font-size: 15px;
+    color: black;
+    margin-top: 20px;
+}
+
+
+.resume-heading-subtaxt{
+    text-align: center;
+    font-size: 12px;
+    color: black;
+    margin-top: 5px;
+   
+
+}
+
+#file {
+    font-size: 14px;
+    position: relative;
+    left: 20px;
+}
+}

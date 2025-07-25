@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Candidates</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="candidate.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @media (max-width:950px){
+       .access{
+        height: 40px;
+        width: 90%;
+        text-align: center;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+      <header>
+        <div class="header-container">
+            <span class="logo">First Job Portal</span>
+            
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav class="nav-menu" id="navMenu">
+                <span class="menu">
+                    <a href="index.html">Home</a>
+                </span>
+                <span class="menu">
+                    <a href="findjob.html">Find Jobs</a>
+                </span>
+                <span class="menu">
+                    <a href="Employer.html">Employers</a>
+                </span>
+                <span class="menu">
+                    <a href="candidate.html">Candidates</a>
+                </span>
+                <span class="menu pages-dropdown">
+                    <a href="#" class="pages-dropdown-toggle">Pages <i class="fas fa-chevron-down"></i></a>
+                    <div class="pages-dropdown-content">
+                        <div class="border"></div>
+                        <a href="About(1).html">About Us</a>
+                        <a href="FAQ's.html">FAQ's</a>
+                        <a href="terms-and-conditions.html">Terms & Conditions</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </span>
+                
+                <div class="header-buttons">
+                    <span class="files upload">
+                        <a href="upload_cv.html">Upload Your CV</a>
+                    </span>
+                    <span class="files access">
+                        <a href="login.html">Login</a>
+                    </span>
+                    <span class="files access">
+                        <a href="jobPortal/application_form.html">SignUp</a>
+                    </span>
+                    <span class="files access job-post">
+                        <a href="job post page/Jobpost.html">Job Post</a>
+                    </span>
+                </div>
+            </nav>
+        </div>
+      </header>
+
+  <div class="candidates-header">
+    <h1>Candidates</h1>
+    <div class="breadcrumb">
+      <a href="index.html"><span>Home</span></a> / Candidates
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Overlay for mobile filter -->
+    <div class="mobile-filter-overlay" id="filterOverlay"></div>
+    <!-- Sidebar Filters -->
+    <aside class="sidebar-filters" id="sidebarFilters">
+      <button class="close-filter-btn" id="closeFilterBtn">&times;</button>
+      <div class="filter-group">
+        <span class="filter-title">Search by Keywords</span>
+        <input type="text" id="keywordInput" class="filter-input" placeholder="Job title, keywords, or company">
+      </div>
+      <div class="filter-group">
+        <span class="filter-title">Location</span>
+        <input type="text" id="locationInput" class="filter-input" placeholder="City or postcode">
+        <!-- <span class="range-label">Radius around selected destination</span>
+        <input type="range" id="radiusInput" min="0" max="200" value="100" step="10" style="width:100%; height: 4px;" >
+        <span class="range-value" id="radiusValue">100km</span> -->
+      </div>
+      <div class="filter-group">
+        <span class="filter-title">Category</span>
+        <select id="categoryInput" class="filter-select">
+          <option value="">Choose a category</option>
+          <option value="Design">Design</option>
+          <option value="Development">Development</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Accountant">Accountant</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <span class="filter-title">Candidate Gender</span>
+        <select id="genderInput" class="filter-select">
+          <option value="">Any</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <span class="filter-title">Date Posted</span>
+        <div class="filter-radio-list" id="datePostedGroup">
+          <label><input type="radio" name="datePosted" value="all" checked>All</label>
+          <label><input type="radio" name="datePosted" value="1">Last Hour</label>
+          <label><input type="radio" name="datePosted" value="24">Last 24 Hour</label>
+          <label><input type="radio" name="datePosted" value="168">Last 7 Days</label>
+          <label><input type="radio" name="datePosted" value="336">Last 14 Days</label>
+          <label><input type="radio" name="datePosted" value="720">Last 30 Days</label>
+        </div>
+      </div>
+      <div class="filter-group">
+        <span class="filter-title">Experience</span>
+        <div class="filter-options" id="experienceGroup">
+          <label class="filter-switch"><input type="checkbox" value="Fresh">Fresh</label>
+          <label class="filter-switch"><input type="checkbox" value="1">1 Year</label>
+          <label class="filter-switch"><input type="checkbox" value="2">2 Year</label>
+          <label class="filter-switch"><input type="checkbox" value="3">3 Year</label>
+          <label class="filter-switch"><input type="checkbox" value="4">4 Year</label>
+        </div>
+      </div>
+      <div class="filter-group">
+        <span class="filter-title">Qualification</span>
+        <div class="filter-options" id="qualificationGroup">
+          <label class="filter-switch"><input type="checkbox" value="Certificate">Certificate</label>
+          <label class="filter-switch"><input type="checkbox" value="Associate Degree">Associate Degree</label>
+          <label class="filter-switch"><input type="checkbox" value="Bachelor Degree">Bachelor Degree</label>
+          <label class="filter-switch"><input type="checkbox" value="Master's Degree">Master's Degree</label>
+          <label class="filter-switch"><input type="checkbox" value="Doctorate Degree">Doctorate Degree</label>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="candidates-list-header">
+        <span class="jobs-count" id="jobsCount">0 jobs</span>
+              <button id="openFilterBtn" class="mobile-filter-btn" aria-label="Show filters">
+    <i class="fas fa-sliders-h"></i> Filter
+  </button>
+        <div class="sort-group">
+          <select id="sortSelect">
+            <option value="">Sort by (default)</option>
+            <option value="name">Name</option>
+            <option value="rate">Hourly Rate</option>
+          </select>
+          <select id="categorySelect">
+            <option value="">All</option>
+            <option value="Design">Design</option>
+            <option value="Development">Development</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Accountant">Accountant</option>
+          </select>
+        </div>
+      </div>
+      <div class="candidates-grid" id="candidatesGrid">
+        <!-- Candidate cards will be rendered here -->
+      </div>
+    </main>
+  </div>
+
+    <footer class="superio-footer">
+      <div class="footer-main">
+        <div class="footer-logo-block">
+          <span class="logo  -title">First Job Portal</span>
+          <div class="footer-contact">
+            <div class="call-us">Call us</div>
+            <a class="phone" href="tel:1234567890">123 456 7890</a>
+            <div class="address">
+              329 Queensberry Street, North Melbourne VIC 3051, Australia.
+            </div>
+            <div class="email">support@firstjobportal.com</div>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <div class="footer-title">For Candidates</div>
+          <ul>
+            <li><a href="candidate.html">Browse Candidates</a></li>
+            <li><a href="findjob.html">Browse Jobs</a></li>
+            <li><a href="index.html#job-categories-main-body">Browse Categories</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <div class="footer-title">For Employers</div>
+          <ul>
+            <li><a href="#">Browse Employers</a></li>
+            <li><a href="findjob.html">Browse Jobs</a></li>
+            <li><a href="index.html#job-categories-main-body">Browse Categories</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <div class="footer-title">About Us</div>
+          <ul>
+            <li><a href="About(1).html">About Us</a></li>
+            <li><a href="terms-and-conditions.html">Terms Page</a></li>
+            <li><a href="FAQ's.html">FAQ's</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <div class="footer-title">Helpful Resources</div>
+          <ul>
+            <li><a href="#">Site Map</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Center</a></li>
+            <li><a href="#">Security Center</a></li>
+            <li><a href="#">Accessibility Center</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 First Job Portal by Simtrak Solutions</span>
+        <div class="footer-bottom-group">
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="footer-social" aria-label="WhatsApp"
+              ><i class="fab fa-whatsapp" aria-hidden="true"></i
+            ></a>
+            <a href="#" class="footer-social" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+          <button class="scroll-to-top" id="scrollTopBtn" title="Go to top">
+            <svg width="32" height="32" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="12" fill="#f2f6ff" />
+              <polyline
+                points="16 14 12 10 8 14"
+                fill="none"
+                stroke="#3664f5"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </footer>
+    <!-- FontAwesome for Social Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  <script src="candidate.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

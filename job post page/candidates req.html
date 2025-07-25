@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candidate Requirements</title>
+    <link rel="stylesheet" href="./candidates req.css">
+</head>
+
+<body>
+<div class="step-wrapper">
+  <div class="step active">
+    <div class="circle">1</div>
+    <p>Job<br>Details</p>
+  </div>
+  <div class="step active">
+    <div class="circle">2</div>
+    <p>Candidates<br>Requirement</p>
+  </div>
+  <div class="step">
+    <div class="circle">3</div>
+    <p>Interviewer<br>Information</p>
+  </div>
+  <div class="step">
+    <div class="circle">4</div>
+    <p>Job<br>Preview</p>
+  </div>
+  <!-- <div class="step">
+    <div class="circle">5</div>
+    <p>Publish<br>Job</p>
+  </div> -->
+</div>
+
+
+
+
+
+    <div class="container">
+        <h2>Candidate Requirements</h2>
+
+        <div class="section">
+            <label>Minimum Education <span style="color: red; font-size: 23px;">*</span></label>
+            <div class="options" id="education-options">
+                <button>10th Or Below 10th</button>
+                <button>12th Pass</button>
+                <button>Diploma</button>
+                <button>Graduate</button>
+                <button>Post Graduate</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <label>English level required <span style="color: red; font-size: 23px;">*</span></label>
+            <div class="options" id="english-options">
+                <button>No English</button>
+                <button>Basic English</button>
+                <button>Good English</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <label>Total experience required <span style="color: red; font-size: 23px;">*</span></label>
+            <div class="options" id="experience-options">
+                <button>Any</button>
+                <button>Experienced Only</button>
+                <button>Fresher Only</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <label>Additional Requirements (Optional)</label>
+            <div class="options">
+                <button onclick="toggleDropdown('gender')">Gender +</button>
+                <select id="gender" class="dropdown" style="display:none">
+                    <option value="">Select Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+
+                <button onclick="toggleDropdown('age')">Age +</button>
+                <select id="age" class="dropdown" style="display:none">
+                    <option value="">Select Age Range</option>
+                    <option>18–25</option>
+                    <option>26–35</option>
+                    <option>36–45</option>
+                    <option>46 and above</option>
+                </select>
+
+                <button onclick="toggleDropdown('languages')">Regional Languages +</button>
+                <select id="languages" class="dropdown" style="display:none">
+                    <option>Hindi</option>
+                    <option>English</option>
+                    <option>Marathi</option>
+                    <option>Tamil</option>
+                    <option>Telugu</option>
+                    <option>Punjabi</option>
+                </select>
+
+                <button onclick="toggleInput('skills')">Skills +</button>
+                <input id="skills" class="input-field" type="text" style="display:none"
+                    placeholder="Enter skills (e.g., HTML, CSS)" />
+            </div>
+        </div>
+
+        <div class="section">
+            <label>Job Description <span style="color: red; font-size: 23px;">*</span></label>
+            <textarea
+                placeholder="Enter the job description, including the main responsibility and tasks..."></textarea>
+        </div>
+
+        <div class="buttons">
+            <button onclick="window.location.href='./Jobpost.html';" class="back">Back</button>
+            <button onclick="window.location.href='./Interviewer.html';">Continue</button>
+        </div>
+    </div>
+
+    <script>
+                const groups = ['education-options', 'english-options', 'experience-options'];
+        groups.forEach(groupId => {
+            const container = document.getElementById(groupId);
+            const buttons = container.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                });
+            });
+        });
+
+        function toggleDropdown(id) {
+            const el = document.getElementById(id);
+            el.style.display = el.style.display === 'none' ? 'inline-block' : 'none';
+        }
+
+        function toggleInput(id) {
+            const el = document.getElementById(id);
+            el.style.display = el.style.display === 'none' ? 'inline-block' : 'none';
+        }
+
+    </script>
+</body>
+
+</html>

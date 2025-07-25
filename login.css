@@ -1,0 +1,255 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  /* background: #153d77; */
+  margin: 0;
+  padding: 0;
+}
+
+/* Top bar with Login button */
+/* .top-bar {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 24px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+} */
+
+/* .main-login-btn {
+  background: #00a5ec;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 28px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.main-login-btn:hover {
+  background: #008dc9;
+} */
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  min-height: 100vh;
+}
+
+.login-modal {
+  background: #fff;
+  border-radius: 10px;
+  padding: 32px 28px 20px 28px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+  position: relative;
+  margin: 16px;
+  box-sizing: border-box;
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 2px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #999;
+  cursor: pointer;
+}
+
+.tab-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 22px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.tab {
+  flex: 1;
+  background: none;
+  border: none;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #444;
+  padding-bottom: 8px;
+  cursor: pointer;
+  outline: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+.tab.active {
+  color: #174eb6;
+  border-bottom: 2px solid #174eb6;
+}
+
+.google-login {
+  margin-bottom: 18px;
+}
+
+.google-btn {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  padding: 10px 0;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: box-shadow 0.2s;
+}
+
+.google-btn:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.or-divider {
+  text-align: center;
+  color: #999;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  position: relative;
+}
+.or-divider span {
+  background: #fff;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+}
+.or-divider:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0; right: 0; top: 50%;
+  border-top: 1px solid #e0e0e0;
+  z-index: 0;
+}
+
+form label {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  background: #fafafd;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+  border-color: #174eb6;
+}
+
+.forgot-row {
+  text-align: right;
+  margin-bottom: 12px;
+}
+
+.forgot-link {
+  font-size: 0.98rem;
+  color: #174eb6;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+  color: #174eb6;
+}
+
+.login-btn {
+  width: 100%;
+  background: #174eb6;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1.15rem;
+  padding: 12px 0;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.login-btn:hover {
+  background: rgb(14, 85, 228);
+}
+
+.register-row {
+  text-align: center;
+  font-size: 1.02rem;
+  color: #444;
+  word-break: break-word;
+}
+.register-row a {
+  color: #174eb6;
+  text-decoration: none;
+}
+.register-row a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .login-modal {
+    padding: 22px 4vw 16px 4vw;
+    max-width: 98vw;
+    min-width: unset;
+  }
+  .tab-row {
+    font-size: 1rem;
+  }
+  .close-btn {
+    font-size: 1.7rem;
+    top: 10px;
+    right: 10px;
+  }
+  .top-bar {
+    padding: 8px 6vw;
+  }
+  .main-login-btn {
+    padding: 8px 12vw;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 340px) {
+  .login-modal {
+    padding: 10px 2vw 8px 2vw;
+    font-size: 90%;
+  }
+  .login-btn, .google-btn {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+}

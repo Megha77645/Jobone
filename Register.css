@@ -1,0 +1,163 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  color: #333;
+}
+
+#heading-main {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  word-spacing: -4px;
+}
+
+#company-count {
+  text-align: center;
+  margin-top: -15px;
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.container-signup {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  width: 420px;
+  text-align: center;
+}
+
+.label-email,
+.label-password {
+  font-size: 16px;
+  color: black;
+  margin-bottom: -2px;
+  font-weight: 500;
+  text-align: left;
+}
+
+#input-firstname,
+#input-lastname {
+  margin-top: 15px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn-google-signup,
+.btn-email-signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: none;
+}
+
+.btn-google-signup {
+  background: #008bdc;
+  border: 1px solid #ccc;
+}
+
+.img-google-logo {
+  width: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: white;
+  padding: 2px;
+}
+
+.btn-email-signup {
+  background: white;
+  border: 1px solid #ccc;
+}
+
+.text-terms {
+  font-size: 12px;
+  margin-top: 15px;
+  color: #777;
+}
+
+.link-terms,
+.link-login {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.text-login {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* Email form styles */
+.form-signup-email {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  width: 95%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.btn-submit-signup {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.divider-signup {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 7px 0;
+  color: #777;
+}
+
+.divider-signup::before,
+.divider-signup::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.divider-signup:not(:empty)::before {
+  margin-right: .75em;
+}
+
+.divider-signup:not(:empty)::after {
+  margin-left: .75em;
+}
+
+@media (max-width: 600px) {
+  #heading-main { font-size: 1.5em; }
+  #company-count { font-size: 0.9em; }
+  .container-signup { padding: 15px; width: 60%; }
+  .btn-google-signup, .btn-email-signup, .btn-submit-signup { font-size: 14px; padding: 10px; }
+  input, #input-firstname, #input-lastname {
+    width: 90%;
+    font-size: 14px;
+  }
+}

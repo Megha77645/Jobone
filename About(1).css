@@ -1,0 +1,133 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.about-breadcrumb-section {
+  background: linear-gradient(135deg, #f3f6fb, #e6effc);
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 46px;
+   width: 100vw; 
+  
+}
+.about-breadcrumb-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+.about-breadcrumb-box {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+}
+.about-breadcrumb-box a {
+  color: #666;
+  text-decoration: none;
+}
+.about-breadcrumb-box span {
+  margin: 0 5px;
+}
+
+ #aboutus-description {
+  max-width: 900px;
+  font-size: 1.2rem;
+  margin-left: 300px;
+  margin-top: 90px;
+}
+.aboutus-description-heading {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 31px;
+  color: #202124;
+  margin-bottom: 31px;
+}
+.aboutus-text-1,
+.aboutus-text-2 {
+  font-size: 15px;
+  line-height: 26px;
+  color: dimgray;
+  margin-bottom: 26px;
+}
+
+/* Responsive media queries start here */
+
+/* For tablets and below (≤ 900px) */
+@media (max-width: 900px) {
+  #aboutus-description {
+    margin-left: 40px;
+    margin-right: 40px;
+    max-width: 100%;
+    margin-top: 60px;
+    font-size: 1rem;
+  }
+  .aboutus-description-heading {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .about-breadcrumb-section {
+    padding: 40px 10px;
+    margin-top: 40px;
+  }
+}
+
+/* For small tablets and large phones (≤ 600px) */
+@media (max-width: 600px) {
+  .about-breadcrumb-section {
+    padding: 30px 5px;
+    margin-top: 40px;
+  }
+  .about-breadcrumb-section h2 {
+    font-size: 21px;
+  }
+  .about-breadcrumb-box {
+    font-size: 12px;
+  }
+  #aboutus-description {
+    margin: 30px 10px 0 10px;
+    max-width: 100%;
+    font-size: 0.98rem;
+    margin-top: 35px;
+  }
+  .aboutus-description-heading {
+    font-size: 19px;
+    line-height: 22px;
+    margin-bottom: 18px;
+  }
+  .aboutus-text-1,
+  .aboutus-text-2 {
+    font-size: 13px;
+    line-height: 21px;
+    margin-bottom: 14px;
+  }
+}
+
+/* For very small screens (≤ 400px) */
+@media (max-width: 400px) {
+  .about-breadcrumb-section {
+    padding: 38px 2px;
+    margin-top: 40px;
+  }
+  .about-breadcrumb-section h2 {
+    font-size: 15px;
+  }
+  .about-breadcrumb-box {
+    font-size: 10px;
+  }
+  #aboutus-description {
+    margin: 18px 2px 0 2px;
+    font-size: 0.87rem;
+    margin-top: 20px;
+  }
+  .aboutus-description-heading {
+    font-size: 15px;
+    line-height: 17px;
+    margin-bottom: 11px;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+
+
+

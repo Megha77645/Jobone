@@ -1,0 +1,301 @@
+/* page 1 form */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background-color: #f3f3f3;
+  padding: 20px;
+  margin: 0;
+}
+
+.container {
+  max-width: 700px;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #000000;
+  margin-top: -5px;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #000000;
+  padding-bottom: 15px;
+  margin-left: 15px;
+  
+}
+
+input[type="text"] {
+  width: 100%;
+  max-width: 95%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-left: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  font-size: 12px;
+  
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 10px;
+  width: 70%;
+}
+
+.btn {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #333;
+  padding: 7px 5px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 15px;
+  font-size: 13px;
+
+}
+
+.btn.active {
+  background-color:  #1665e3;;
+  color: white;
+  font-weight: bold;
+}
+
+.checkbox-group label,
+.radio-group label {
+  display: block;
+  margin-top: 6px;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.input :hover{
+  border: 2px solid black;
+  }
+
+.submit-btn {
+  background-color: #1665e3;
+  color: white;
+  padding: 12px;
+  border: none;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color:#1665e3;;
+}
+
+/* Buttons 1  2  3  4  5   */
+
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  border-radius: 25px;
+}
+
+.step {
+  position: relative;
+  text-align: center;
+  flex: 1;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.step.active .circle {
+  background-color: #1665e3;;
+}
+
+.label {
+  font-size: 15px;
+  font-weight: 600;
+  /* font-family:Arial, Helvetica, sans-serif; */
+  color: #000000;
+  margin-top: 8px;
+  display: block;
+}
+
+/* connecting lines */
+.step::before {
+  content: "";
+  position: absolute;
+  top: 18%;
+  left: -42.2%;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  z-index: 0;
+}
+
+
+.step:first-child::before {
+  display: none;
+}
+
+.buttons{
+  /* background-color: #ffffff; */
+  max-width: 930px;
+  margin: 0 auto;
+  padding: 5px;
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+  padding-bottom: revert;
+}
+
+
+
+        .buttons-continue{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 20px;
+        }
+
+        .buttons-continue button {
+            padding: 16px 0px;
+            background-color:  #1665e3;;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.22rem;
+        }
+        .buttons-continue button:hover{
+          background-color: #07398b;
+          color: white;
+        }
+
+        .buttons-continue button.back {
+            background-color: #ccc;
+            color: #333;
+        }
+        
+
+
+/*  */
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 1024px) {
+  .btn-group {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .btn {
+    flex: 1 1 45%;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container, .buttons {
+    padding: 0px;
+  }
+
+  .stepper {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  /* .step::before {
+    display: none;
+  } */
+
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 90%;
+  }
+
+  .buttons-continue {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buttons-continue button {
+    width: 80%;
+   margin: auto;
+   margin-bottom: 20px;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+
+  form label {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 24px;
+  }
+
+  .circle {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+
+  .step {
+    text-align: left;
+  }
+}
