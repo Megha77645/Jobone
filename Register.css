@@ -10,6 +10,7 @@ body {
   min-height: 100vh;
   color: #333;
 }
+  
 
 #heading-main {
   font-size: 3em;
@@ -70,8 +71,10 @@ button {
 }
 
 .btn-google-signup {
-  background: #008bdc;
+  background-color:#007BFF;
   border: 1px solid #ccc;
+  font-weight: 600;
+  color: white;
 }
 
 .img-google-logo {
@@ -128,6 +131,7 @@ input {
   font-size: 16px;
   cursor: pointer;
   margin-top: 20px;
+  font-weight: 600;
 }
 
 .divider-signup {
@@ -156,7 +160,7 @@ input {
 @media (max-width: 600px) {
   #heading-main { font-size: 1.5em; }
   #company-count { font-size: 0.9em; }
-  .container-signup { padding: 15px; width: 60%; }
+  .container-signup { padding: 15px; width: 60%; margin-left: 60px; }
   .btn-google-signup, .btn-email-signup, .btn-submit-signup { font-size: 14px; padding: 10px; }
   input, #input-firstname, #input-lastname {
     width: 90%;
