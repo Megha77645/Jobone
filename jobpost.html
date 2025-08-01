@@ -154,8 +154,17 @@
         </div>
         </div>
         <div class="form-group">
-          <label for="email">Company Name(Optional) </label>
-          <input type="text" id="Cname" placeholder="Company Name" required>
+          <label for="email">User Type:</label>
+          <!-- <input type="text" id="Cname" placeholder="Company Name" required> -->
+           <select name="user_type" id="user_type" onchange="companyNameInput()" required>
+             <option value="" style="color: grey;">--Select--</option>
+             <option value="individual">Individual</option>
+             <option value="company">Company</option>
+            </select>
+            <div id="companyNameInput" class="hidden">
+              <label for="companyName">Company Name:</label>
+              <input type="text" id="companyName" placeholder="Enter company name">
+            </div>
         </div>
         <div class="form-group">
           <label for="password">Password <span class="req">*</span></label>
@@ -164,7 +173,7 @@
         <div class="form-tc">
           By clicking on <b>Submit</b>, you agree to our <a href="#">T&amp;C.</a>
         </div>
-        <button type="submit" class="post-btn">Create Your Company Account</button>
+        <button type="submit" class="post-btn">Create Your Employer Account</button>
         <div class="login-link">
           Already registered? <a href="#">Login</a>
         </div>

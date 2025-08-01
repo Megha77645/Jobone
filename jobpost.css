@@ -183,7 +183,7 @@ html, body {
   border-radius: var(--form-radius);
   padding: 32px 30px 28px 30px;
   max-width: 320px;
-  max-height: 550px;
+  /* max-height: 550px; */
   min-width: 290px;
   display: flex;
   flex-direction: column;
@@ -221,6 +221,10 @@ html, body {
   transition: border .2s;
   height: 30%;
 }
+
+#fname , #lname{
+  margin-top: 7px;
+} 
 
 .name-group,.last-group {
   font-weight: 500;
@@ -333,6 +337,32 @@ html, body {
   text-decoration: underline;
   margin-left: 2px;
 }
+#user_type{
+  padding: 12px;
+  border: 1px solid var(--input-border);
+  background: var(--form-bg);
+  border-radius: 3px;
+  font-size: 1rem;
+  outline: none;
+  transition: border .2s;
+  width: 100%;  
+  max-width: 100%;
+}
+
+#companyNameInput{
+  margin-top: 20px;
+}
+#companyNameInput input{
+ margin-top: 10px;
+ width: 92%;
+}
+#companyName > input{
+  padding: 5px;
+  width: 100%;
+}
+.hidden {
+  display: none;
+}
 
 /* Tablet screens */
 @media (max-width: 1024px) {
@@ -352,7 +382,7 @@ html, body {
     width: 100%;
     max-width: 360px;
     min-width: 0;
-    padding: 20px 8px;
+    padding: 35px 30px;
   }
   .last-group input {
     width: 86%;
@@ -370,6 +400,7 @@ html, body {
   .hero-text {
     margin-bottom: 40px;
   }
+  
 }
 
 /* Large mobile and small tablet screens */
@@ -400,9 +431,8 @@ html, body {
     gap: 10px;
   }
   .right-section {
-    padding: 10px 5px;
+    padding: 40px 30px;
     max-width: 55vw;
-    padding: 20px;
   }
     .last-group input {
     width: 88%;
@@ -434,9 +464,9 @@ html, body {
     padding: 6px 8px 6px 6px;
   }
   .right-section {
-    padding: 8px 2px;
+    /* padding: 35px 30px; */
     max-width: 75vw;
-    padding: 20px;
+    /* padding: 20px; */
     margin-top: 18px;
     margin-bottom: 18px;
   }
@@ -467,9 +497,10 @@ html, body {
 /* For very small screens */
 @media (max-width: 350px) {
   .right-section {
-    padding: 4px 0;
+    /* padding: 4px 0; */
     max-width: 75vw;
-    padding: 20px;
+    padding: 35px 30px;
+    /* padding: 20px; */
   }
   .form-group input,
   .name-group input,
