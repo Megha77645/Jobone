@@ -35,8 +35,21 @@
       const email = document.getElementById('email').value.trim();
       const password = document.getElementById('password').value;
       if (email && password.length >= 6) {
-        alert('Login successful (demo only)');
-        document.getElementById('modalOverlay').style.display = 'none';
+        fetch('http://localhost:5000/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email, password })
+        }).then(response => response.json())
+        .then(data => {
+          console.log(data);
+          alert('Login successful (demo only)');
+          document.getElementById('modalOverlay').style.display = 'none';
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
       } else {
         alert('Please enter valid credentials.');
       }

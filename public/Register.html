@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,131 +8,165 @@
   <link rel="stylesheet" href="Register.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
-<body>
-      <header>
-        <div class="header-container">
-          <span class="logo">JobOne</span>
-          <div class="hamburger" id="hamburger">
-            <i class="fas fa-bars"></i>
-          </div>
 
-          <nav class="nav-menu" id="navMenu">
-            <span class="menu">
-              <a href="index.html">Home</a>
-            </span>
-            <span class="menu">
-              <a href="findjob.html">Find Jobs</a>
-            </span>
-            <!-- <span class="menu">
+<body>
+  <header>
+    <div class="header-container">
+      <span class="logo">JobOne</span>
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <span class="menu">
+          <a href="index.html">Home</a>
+        </span>
+        <span class="menu">
+          <a href="findjob.html">Find Jobs</a>
+        </span>
+        <!-- <span class="menu">
               <a href="Employer.html">Employers</a>
             </span> -->
-            <!-- <span class="menu">
+        <!-- <span class="menu">
               <a href="candidate.html">Candidates</a>
             </span> -->
-            <span class="menu pages-dropdown">
-              <a href="#" class="pages-dropdown-toggle">Pages <i class="fas fa-chevron-down"></i></a>
-              <div class="pages-dropdown-content">
-                <div class="border"></div>
-                <a href="About(1).html">About Us</a>
-                <!-- <a href="FAQ's.html">FAQ's</a>
+        <span class="menu pages-dropdown">
+          <a href="#" class="pages-dropdown-toggle">Pages <i class="fas fa-chevron-down"></i></a>
+          <div class="pages-dropdown-content">
+            <div class="border"></div>
+            <a href="About(1).html">About Us</a>
+            <!-- <a href="FAQ's.html">FAQ's</a>
                 <a href="terms-and-conditions.html">Terms & Conditions</a>
                 <a href="contact.html">Contact Us</a> -->
-              </div>
-            </span>
+          </div>
+        </span>
 
-            <div class="header-buttons">
-              <!-- <span class="files upload">
+        <div class="header-buttons">
+          <!-- <span class="files upload">
                 <a href="upload_cv.html">Upload Your CV</a>
               </span> -->
-              <span class="files login-access">
-                <!-- <a href="login.html">Login</a> -->
-                <a id="openLogin" id="login-btn">Login</a>
-                  <!-- Login Modal Popup -->
-                <div class="modal-overlay" id="modalOverlay" style="display: none;">
-                  <div class="login-modal">
-                    <button class="close-btn" aria-label="Close" id="closeModal">&times;</button>
-                    <div class="tab-row">
-                      <button class="tab active" id="studentTab">Student</button>
-                      <button class="tab" id="employerTab">Employer / T&P</button>
-                    </div>
-                    <div id="google-login" class="google-login">
-                      <button class="google-btn">
-                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" class="google-icon">
-                        Login with Google
-                      </button>
-                      <div class="or-divider"><span>OR</span></div>
-                    </div>
-                    <form id="loginForm" autocomplete="off">
-                      <label for="email">Email</label>
-                      <input id="email" type="email" placeholder="john@example.com" required>
-                      <label for="password">Password</label>
-                      <input id="password" type="password" placeholder="Must be atleast 6 characters" minlength="6" required>
-                      <div class="forgot-row">
-                        <a href="#" class="forgot-link">Forgot password?</a>
-                      </div>
-                      <button type="submit" class="login-btn">Login</button>
-                    </form>
-                    <div class="register-row">
-                      New to Job Portal? Register <a href="#">(Student</a> / <a href="#">Company)</a>
-                    </div>
-                  </div>
+          <span class="files login-access">
+            <!-- <a href="login.html">Login</a> -->
+            <a id="openLogin" id="login-btn">Login</a>
+            <!-- Login Modal Popup -->
+            <div class="modal-overlay" id="modalOverlay" style="display: none;">
+              <div class="login-modal">
+                <button class="close-btn" aria-label="Close" id="closeModal">&times;</button>
+                <div class="tab-row">
+                  <button class="tab active" id="studentTab">Student</button>
+                  <button class="tab" id="employerTab">Employer / T&P</button>
                 </div>
-              </span>
-              <span class="files register-access">
-                <a href="Register.html">Register</a>
-              </span>
-              <span class="files job-post">
-                <a href="jobpost.html">For employers ></a>
-              </span>
+                <div id="google-login" class="google-login">
+                  <button class="google-btn">
+                    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google"
+                      class="google-icon">
+                    Login with Google
+                  </button>
+                  <div class="or-divider"><span>OR</span></div>
+                </div>
+                <form id="loginForm" autocomplete="off">
+                  <label for="email">Email</label>
+                  <input id="email" type="email" placeholder="john@example.com" required>
+                  <label for="password">Password</label>
+                  <input id="password" type="password" placeholder="Must be atleast 6 characters" minlength="6"
+                    required>
+                  <div class="forgot-row">
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                  </div>
+                  <button type="submit" class="login-btn">Login</button>
+                </form>
+                <div class="register-row">
+                  New to Job Portal? Register <a href="#">(Student</a> / <a href="#">Company)</a>
+                </div>
+              </div>
             </div>
-          </nav>
+          </span>
+          <span class="files register-access">
+            <a href="Register.html">Register</a>
+          </span>
+          <span class="files job-post">
+            <a href="jobpost.html">For employers ></a>
+          </span>
         </div>
-      </header>
+      </nav>
+    </div>
+  </header>
 
 
   <h1 id="heading-main">Sign-up and <span id="heading-highlight">apply for free</span></h1>
   <p id="company-count">3,00,000+ companies hiring on First Job</p>
 
-  <form><div class="container-signup">
-    <!-- Default buttons -->
-    <div id="section-btns">
-      <button class="btn-google-signup">
-        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google Logo" class="img-google-logo">
-        Sign up with Google
-      </button>
-      <button class="btn-email-signup" onclick="showEmailSignupForm()">Sign up with Email</button>
-    </div>
-
-    <!-- Email signup form -->
-    <div id="section-email-form" class="form-signup-email">
-      <button class="btn-google-signup" id="btn-google-in-email">
-        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google Logo" class="img-google-logo">
-        Sign up with Google
-      </button>
-      <div class="divider-signup">OR</div>
-      <label for="input-email" class="label-email">Email</label>
-      <input type="email" id="input-email" placeholder="Enter your email" required>
-      <label for="input-password" class="label-password">Password</label>
-      <input type="password" id="input-password" placeholder="Must be atleast 6 characters" required>
-      <div style="display: flex; gap: 10px;">
-        <input type="text" placeholder="First Name" id="input-firstname" required>
-        <input type="text" placeholder="Last Name" id="input-lastname" required>
+  <form id="signup-form">
+    <div class="container-signup">
+      <!-- Default buttons -->
+      <div id="section-btns">
+        <button class="btn-google-signup">
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google Logo" class="img-google-logo">
+          Sign up with Google
+        </button>
+        <button class="btn-email-signup" onclick="showEmailSignupForm()">Sign up with Email</button>
       </div>
-      <button class="btn-submit-signup">Sign up</button>
+
+      <!-- Email signup form -->
+      <div id="section-email-form" class="form-signup-email">
+        <button class="btn-google-signup" id="btn-google-in-email">
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google Logo" class="img-google-logo">
+          Sign up with Google
+        </button>
+        <div class="divider-signup">OR</div>
+        <label for="input-email" class="label-email">Email</label>
+        <input type="email" id="input-email" placeholder="Enter your email" required>
+        <label for="input-password" class="label-password">Password</label>
+        <input type="password" id="input-password" placeholder="Must be atleast 6 characters" required>
+        <div style="display: flex; gap: 10px;">
+          <input type="text" placeholder="First Name" id="input-firstname" required>
+          <input type="text" placeholder="Last Name" id="input-lastname" required>
+        </div>
+        <button type="submit" id="submitButton" class="btn-submit-signup">Sign up</button>
+      </div>
+
+      <p class="text-terms">
+        By signing up, you agree to our
+        <a href="#" class="link-terms">Terms and Conditions</a>.
+      </p>
+
+      <p class="text-login">
+        Already registered? <a href="#" class="link-login">Login</a>
+      </p>
     </div>
-
-    <p class="text-terms">
-      By signing up, you agree to our 
-      <a href="#" class="link-terms">Terms and Conditions</a>.
-    </p>
-
-    <p class="text-login">
-      Already registered? <a href="#" class="link-login">Login</a>
-    </p>
-  </div>
   </form>
 
   <script>
+    const form = document.getElementById("signup-form");
+    const email = document.getElementById("input-email");
+    const password = document.getElementById("input-password");
+    const firstName = document.getElementById("input-firstname");
+    const lastName = document.getElementById("input-lastname");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      fetch("http://localhost:5000/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: `${firstName.value} ${lastName.value}`,
+          email: email.value,
+          password: password.value
+        })
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          alert(data.message || "Registration successful!");
+        })
+        .catch(error => {
+          console.error("Error:", error);
+          alert("Error occurred during registration");
+        });
+    });
     function showEmailSignupForm() {
       document.getElementById("section-btns").style.display = "none";
       document.getElementById("section-email-form").style.display = "flex";
@@ -144,4 +179,5 @@
   </script>
   <script src="script.js"></script>
 </body>
+
 </html>
