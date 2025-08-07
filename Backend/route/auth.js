@@ -1,25 +1,25 @@
 const express = require('express');
 const router = express.Router();
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const cors = require('cors');
-const path = require('path');
-const User = require('../models/user');
-const authRouter = require('./route/auth');
-const app = express();
-const PORT = process.env.PORT || 5000;
-app.use(cors());
-app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
-const MONGODB_URI = process.env.MONGODB_URI;
-mongoose.connect(MONGODB_URI)
-  .then(() => {
-    console.log('MongoDB connected successfully!');
-  })
-  .catch((err) => {
-    console.error('MongoDB connection error:', err);
-});
+// const cors = require('cors');
+// const path = require('path');
+const User = require('./models/user');
+// const authRouter = require('./route/auth');
+// const app = express();
+// const PORT = process.env.PORT || 5000;
+// app.use(cors());
+// app.use(express.json());
+// app.use(express.static(path.join(__dirname, 'public')));
+// const MONGODB_URI = process.env.MONGODB_URI;
+// mongoose.connect(MONGODB_URI)
+//   .then(() => {
+//     console.log('MongoDB connected successfully!');
+//   })
+//   .catch((err) => {
+//     console.error('MongoDB connection error:', err);
+// });
 
 require('dotenv').config();
 const JWT_SECRET = process.env.JWT_SECRET;
@@ -68,11 +68,11 @@ router.post('/login', async (req, res) => {
   }
 });
 module.exports = router;
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'Register.html'));
-});
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-  console.log(`Access your application at http://localhost:${PORT}`);
-});
+// app.get('/', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'public', 'Register.html'));
+// });
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}`);
+//   console.log(`Access your application at http://localhost:${PORT}`);
+// });
 
