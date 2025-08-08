@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('navMenu');
   const dropdownToggles = document.querySelectorAll('.pages-dropdown-toggle');
-  checkAuthStatus();
-
 
   // Toggle mobile menu
   hamburger.addEventListener('click', function () {
@@ -53,41 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-// async function checkAuthStatus() {
-//   const token = localStorage.getItem('token');
-//   if (!token) {
-//     // User is not logged in
-//     return;
-//   }
-//   try {
-//     const response = await fetch('/api/auth/user', {
-//       headers: {
-//         'Authorization': token
-//       }
-//     });
-//     if (response.ok) {
-//       const data = await response.json();
-//       // User is logged in
-//       console.log('User data:', data.user);
-//     } else {
-//       // Token is invalid or expired
-//       console.log('User is not authenticated');
-//     }
-//   } catch (error) {
-//     console.error('Error checking auth status:', error);
-//   }
-// }
-// function updateUIForLoggedInUser(user) {
-//  const loginBtn = document.querySelector('.login-btn');
-//  const registerBtn = document.querySelector('.register-btn');
-//  if(loginBtn) {
-//   loginBtn.innerHTML = '<a href="#">logout</a>';
-//   document.getElementById("logoutBtn").addEventListener("click", function() {
-//     preventDefault();
-//     logout();
-//   });
-  
-// }
+
 const jobs = [
   {
     id: 1,

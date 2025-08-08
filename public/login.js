@@ -44,7 +44,7 @@
         }).then(response => response.json())
         .then(data => {
           console.log(data);
-          alert('Login successful (demo only)');
+          alert('Login successful');
           document.getElementById('modalOverlay').style.display = 'none';
         })
         .catch(error => {
