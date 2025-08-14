@@ -1,3 +1,8 @@
+//google authentication
+document.getElementById("googleLoginBtn").addEventListener("click", function () {
+    window.location.href = "http://localhost:5000/auth/google";
+});
+
 document.addEventListener('DOMContentLoaded', function () {
   const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('navMenu');

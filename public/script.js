@@ -26,6 +26,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  //google authentication
+document.getElementById("googleLoginBtn").addEventListener("click", function () {
+    window.location.href = "http://localhost:5000/auth/google/callback";
+});
+
   // Close menu when clicking outside on mobile
   document.addEventListener('click', function (e) {
     if (window.innerWidth <= 992 && navMenu.classList.contains('active')) {

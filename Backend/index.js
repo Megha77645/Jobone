@@ -1,5 +1,9 @@
 import 'dotenv/config';
 import express from 'express';
+import session from "express-session";
+import passport from "passport";
+import { Strategy as GoogleStrategy } from "passport-google-oauth20";
+import dotenv from "dotenv";
 import mongoose from 'mongoose';
 import cors from 'cors';
 import path from 'path';
@@ -10,10 +14,56 @@ import { fileURLToPath } from 'url';
 import User from './models/user.js';
 import authRoutes from './route/auth.js';
 
+dotenv.config();
+
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
+// Session setup
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+// Passport serialize & deserialize
+passport.serializeUser((user, done) => {
+    done(null, user);
+});
+passport.deserializeUser((obj, done) => {
+    done(null, obj);
+});
+// Google OAuth Strategy
+passport.use(new GoogleStrategy({
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    callbackURL: process.env.GOOGLE_CALLBACK_URL
+}, (accessToken, refreshToken, profile, done) => {
+    // Yaha tum database me user save kar sakte ho
+    return done(null, profile);
+}));
+// Routes
+app.get("/", (req, res) => {
+    res.send("<a href='/auth/google'>Login with Google</a>");
+});
+
+app.get("/auth/google", (req, res, next) => {
+  console.log("Going for the ride");
+    passport.authenticate("google", { scope: ["profile", "email"] })(req, res, next);
+});
+
+app.get("/auth/google/callback", 
+    passport.authenticate("google", { failureRedirect: "/" }),
+    (req, res) => {
+        // Successful login
+        res.send(`Hello ${req.user.displayName}, Google login successful!`);
+    }
+);
+
+app.listen(5000, () => console.log("Server running on http://localhost:5000"));
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI;
 const JWT_SECRET = process.env.JWT_SECRET;
