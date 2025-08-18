@@ -496,3 +496,36 @@ document.addEventListener("DOMContentLoaded", function () {
   scrollBtn.style.opacity = "0";
   scrollBtn.style.pointerEvents = "none";
 });
+
+const postJobLink = document.getElementById("postJobLink");
+
+function login() {
+      localStorage.setItem("loggedIn", "true");
+      updateNavbar();
+      alert("You are now logged in ✅");
+    }
+
+    function logout() {
+      localStorage.removeItem("loggedIn");
+      updateNavbar();
+      alert("You are now logged out ❌");
+    }
+
+        function updateNavbar() {
+      const loggedIn = localStorage.getItem("loggedIn") === "true";
+
+      // Show/hide protected links
+      document.getElementById("postJobLink").style.display = loggedIn ? "inline" : "none";
+      // document.getElementById("dashboardLink").style.display = loggedIn ? "inline" : "none";
+
+      // Show login/logout button
+      document.getElementById("loginBtn").style.display = loggedIn ? "none" : "inline";
+      document.getElementById("loginAccess").style.display = loggedIn ? "none" : "inline";
+      document.getElementById("registerAccess").style.display = loggedIn ? "none" : "inline";
+      document.getElementById("userImage").style.display = loggedIn ? "inline" : "none";
+
+      document.getElementById("logoutBtn").style.display = loggedIn ? "inline" : "none";
+    }
+
+    // Run when page loads
+    window.onload = updateNavbar;

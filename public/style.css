@@ -304,6 +304,23 @@ a {
 .access a {
     color: rgb(40, 104, 243);
 }
+.logout-access {
+   border: 1px solid rgb(40, 104, 243);
+    border-radius: 5px;
+    padding: 4px 15px;
+    padding-bottom: 8px;
+    /* background-color: rgba(220, 216, 216, 0.845); */
+    transition: all 0.3s;
+    margin-bottom: -5px;
+    background-color: white;
+}
+.logout-access:hover {
+  cursor: pointer;
+}
+.logout-access p{
+    color: rgb(40, 104, 243);
+    font-weight: 600;
+}
 
 .login-access {
     border: 1px solid rgb(40, 104, 243);
@@ -409,6 +426,12 @@ a {
     cursor: pointer;
     font-size: 24px;
     color: #174eb6;
+}
+.user-image img{
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
 }
 
 /* Animation */

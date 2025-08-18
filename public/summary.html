@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Job Summary</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #f5f6fa);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    .summary-card {
+      width: 100%;
+      max-width: 600px;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      color: #008bdc;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+      color: #333;
+      margin: 10px 0;
+    }
+    strong {
+      color: #555;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #008bdc;
+    }
+    hr {
+      margin: 20px 0;
+      border: none;
+      border-top: 1px solid #eee;
+    }
+    #postJobButton {
+      background: #008bdc;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.3s, transform 0.2s;
+    }
+    #postJobButton:hover {
+      background: #0073b1;
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+  <div class="summary-card">
+    <h2>Job Summary</h2>
+    <p><strong>Duration Type:</strong> <span id="durationType"></span></p>
+    <p><strong>From:</strong> <span id="from"></span></p>
+    <p><strong>To:</strong> <span id="to"></span></p>
+    <p><strong>Daily Working Hours:</strong> <span id="minMaxHours"></span></p>
+    <p><strong>Mode:</strong> <span id="mode"></span></p>
+    <p><strong>Working Time:</strong> <span id="fromTime"></span> – <span id="toTime"></span></p>
+    <p><strong>No. of Days:</strong> <span id="noOfDays"></span></p>
+    <p><strong>No. of People Required:</strong> <span id="numPeople"></span></p>
+    <p><strong>Gender Preference:</strong> <span id="gender"></span></p>
+    <p><strong>Payment per Hour:</strong> ₹<span id="remuneration"></span></p>
+    <hr />
+    <p><strong>Total Monthly Hours:</strong> <span class="highlight" id="totalHours"></span></p>
+    <p><strong>Estimated Monthly Payment:</strong> ₹<span class="highlight" id="totalPayment"></span></p>
+    <button id="postJobButton">Post Job</button>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const minMaxHours = parseFloat(params.get("minMaxHours")) || 0;
+    const noOfDays = parseInt(params.get("noOfDays")) || 0;
+    const remuneration = parseFloat(params.get("remuneration")) || 0;
+
+    const totalHours = minMaxHours * noOfDays;
+    const totalPayment = totalHours * remuneration;
+
+    document.getElementById("durationType").textContent = params.get("durationType");
+    document.getElementById("from").textContent = params.get("from");
+    document.getElementById("to").textContent = params.get("to");
+    document.getElementById("minMaxHours").textContent = minMaxHours;
+    document.getElementById("mode").textContent = params.get("mode");
+    document.getElementById("fromTime").textContent = params.get("fromTime");
+    document.getElementById("toTime").textContent = params.get("toTime");
+    document.getElementById("noOfDays").textContent = noOfDays;
+    document.getElementById("numPeople").textContent = params.get("numPeople");
+    document.getElementById("gender").textContent = params.get("gender");
+    document.getElementById("remuneration").textContent = remuneration;
+
+    document.getElementById("totalHours").textContent = totalHours.toFixed(1);
+    document.getElementById("totalPayment").textContent = totalPayment.toFixed(2);
+  </script>
+</body>
+</html>

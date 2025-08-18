@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post a Job</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #f5f6fa);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .card {
+      width: 100%;
+      max-width: 600px;
+      background: white;
+      padding: 30px;
+      margin: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 28px;
+      color: black;
+    }
+    h3 {
+      text-align: center;
+      color: #333;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    label {
+      font-size: 15px;
+      color: #444;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    input:focus, select:focus {
+      border-color: #008bdc;
+      box-shadow: 0 0 5px rgba(0,139,220,0.3);
+      outline: none;
+    }
+    .duration-range {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .btn {
+      background: #008bdc;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-weight: 700;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn:hover {
+      background: #0073b1;
+      transform: scale(1.02);
+    }
+    @media (max-width: 600px) {
+      .duration-range {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Post a Job</h2>
+    <h3>Type of Part Time Work</h3>
+    <form id="jobForm">
+      <div class="form-group">
+        <label>Duration</label>
+        <div class="duration-range">
+          <select id="durationType" onchange="showDurationInputs()" required>
+            <option value="day">Day</option>
+            <option value="week">Week</option>
+            <option value="month">Month</option>
+          </select>
+        </div>
+        <div class="duration-range" id="durationInputs"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="min-maxHours">Daily Working Hours</label>
+        <input type="number" id="min-maxHours" placeholder="Min Hours" min="1" max="8" required>
+      </div>
+
+      <div class="form-group">
+        <label for="mode">Mode</label>
+        <select id="mode" required>
+          <option value="online">Online</option>
+          <option value="offline">Offline</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Working Time (From – To)</label>
+        <div style="display: flex; gap: 10px;">
+          <input type="time" id="fromTime" required>
+          <input type="time" id="toTime" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="noOfDays">No. of Days</label>
+        <input type="number" id="noOfDays" placeholder="e.g. 5" required>
+      </div>
+
+      <div class="form-group">
+        <label for="numPeople">No. of People Required</label>
+        <input type="number" min="0" id="numPeople" placeholder="e.g. 4" required>
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender Preference</label>
+        <select id="gender" required>
+          <option>No Preference</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="remuneration">Payment per Hour (₹)</label>
+        <input type="number" min="0" id="remuneration" placeholder="e.g. 20" required>
+      </div>
+
+      <button type="submit" class="btn">Go to Summary</button>
+    </form>
+  </div>
+
+  <!-- <script>
+  function showDurationInputs() {
+    const type = document.getElementById("durationType").value;
+    const container = document.getElementById("durationInputs");
+    container.innerHTML = ""; // Clear previous inputs
+
+    if (type === "day") {
+      container.innerHTML = `
+        <input type="date" id="fromDate" style="flex: 1;" placeholder="From Date" required>
+        <input type="date" id="toDate" style="flex: 1;" placeholder="To Date" required>
+      `;
+    } else if (type === "week") {
+      container.innerHTML = `
+        <input type="week" id="fromWeek" style="flex: 1;" placeholder="From Week" required>
+        <input type="week" id="toWeek" style="flex: 1;" placeholder="To Week" required>
+      `;
+    } else if (type === "month") {
+      container.innerHTML = `
+        <input type="month" id="fromMonth" style="flex: 1;" placeholder="From Month" required>
+        <input type="month" id="toMonth" style="flex: 1;" placeholder="To Month" required>
+      `;
+    }
+  }
+
+  // Call on page load also
+  window.onload = showDurationInputs;
+
+
+
+  
+
+</script> -->
+
+<script> 
+// Picker open karne wala function
+  function attachPickerOpeners() {
+    const allPickers = document.querySelectorAll('input[type="date"], input[type="week"], input[type="month"], input[type="time"]');
+    allPickers.forEach(picker => {
+      picker.addEventListener('click', () => {
+        if (picker.showPicker) {
+          picker.showPicker();
+        }
+      });
+    });
+  }
+
+function showDurationInputs() {
+  const type = document.getElementById("durationType").value;
+  const container = document.getElementById("durationInputs");
+  container.innerHTML = "";
+  if (type === "day") {
+    container.innerHTML = `
+      <input type="date" id="fromDate" style="flex: 1;" required>
+      <input type="date" id="toDate" style="flex: 1;" required>
+    `;
+  } else if (type === "week") {
+    container.innerHTML = `
+      <input type="week" id="fromWeek" style="flex: 1;" required>
+      <input type="week" id="toWeek" style="flex: 1;" required>
+    `;
+  } else if (type === "month") {
+    container.innerHTML = `
+      <input type="month" id="fromMonth" style="flex: 1;" required>
+      <input type="month" id="toMonth" style="flex: 1;" required>
+    `;
+  }
+  attachPickerOpeners(); // Attach picker openers after updating the container
+}
+  window.onload = function () {
+    showDurationInputs();      // Inputs dikhaye
+    attachPickerOpeners();     // Picker open karne wala trigger lagaye// window.onload = showDurationInputs;
+  };
+  
+document.getElementById("jobForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const durationType = document.getElementById("durationType").value;
+  let from = "",
+    to = "";
+  if (durationType === "day") {
+    from = document.getElementById("fromDate").value;
+    to = document.getElementById("toDate").value;
+  } else if (durationType === "week") {
+    from = document.getElementById("fromWeek").value;
+    to = document.getElementById("toWeek").value;
+  } else if (durationType === "month") {
+    from = document.getElementById("fromMonth").value;
+    to = document.getElementById("toMonth").value;
+  }
+  const params = new URLSearchParams({
+    durationType,
+    from,
+    to,
+    minMaxHours: document.getElementById("min-maxHours").value,
+    mode: document.getElementById("mode").value,
+    fromTime: document.getElementById("fromTime").value,
+    toTime: document.getElementById("toTime").value,
+    noOfDays: document.getElementById("noOfDays").value,
+    numPeople: document.getElementById("numPeople").value,
+    gender: document.getElementById("gender").value,
+    remuneration: document.getElementById("remuneration").value
+  });
+  window.location.href = `summary.html?${params.toString()}`;
+});
+
+document.getElementById("fromTime").addEventListener("change", function () {
+  const fromTime = this.value;
+  const dailyHours = parseFloat(document.getElementById("min-maxHours").value);
+
+  if (!fromTime || isNaN(dailyHours)) return; // Kuch na ho toh exit
+
+  const [hours, minutes] = fromTime.split(":").map(Number);
+  const endDate = new Date();
+  endDate.setHours(hours);
+  endDate.setMinutes(minutes);
+  endDate.setMinutes(endDate.getMinutes() + dailyHours * 60); // Add working time
+
+  // Format to HH:MM for input
+  const toHours = String(endDate.getHours()).padStart(2, '0');
+  const toMinutes = String(endDate.getMinutes()).padStart(2, '0');
+  document.getElementById("toTime").value = `${toHours}:${toMinutes}`;
+});
+</script>
+
+</body>
+</html>

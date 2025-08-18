@@ -24,9 +24,9 @@
           </div>
 
           <nav class="nav-menu" id="navMenu">
-            <!-- <span class="menu">
-              <a href="index.html">Home</a>
-            </span> -->
+            <span class="menu">
+              <a id="postJobLink" href="postJob.html" style="display: none;">Post a part time job</a>
+            </span>
             <span class="menu">
               <a href="findjob.html">Find part time jobs</a>
             </span>
@@ -51,9 +51,12 @@
               <!-- <span class="files upload">
                 <a href="upload_cv.html">Upload Your CV</a>
               </span> -->
-              <span class="files login-access">
+              <!-- <span class="logout-access"> -->
+                <button class="logout-btn logout-access" id="logoutBtn" style="display: none;" onclick="logout()"><p>Logout</p></button>
+              <!-- </span> -->
+              <span class="files login-access" id="loginAccess">
                 <!-- <a href="login.html">Login</a> -->
-                <a id="openLogin" id="login-btn">Login</a>
+                <a id="openLogin">Login</a>
                   <!-- Login Modal Popup -->
                 <div class="modal-overlay" id="modalOverlay" style="display: none;">
                   <div class="login-modal">
@@ -77,7 +80,8 @@
                       <div class="forgot-row">
                         <a href="#" class="forgot-link">Forgot password?</a>
                       </div>
-                      <button type="submit" class="login-btn">Login</button>
+                      <button type="submit" class="login-btn" id="loginBtn" onclick="login()">Login</button>
+                      
                     </form>
                     <div class="register-row">
                       New to Job1? <br>Register<a href="Register.html">(Student</a> / <a href="Register.html">Company)</a>
@@ -85,11 +89,14 @@
                   </div>
                 </div>
               </span>
-              <span class="files register-access">
+              <span class="files register-access" id="registerAccess">
                 <a href="Register.html">Register</a>
               </span>
               <span class="files job-post">
                 <a href="jobpost.html">For employers ></a>
+              </span>
+              <span class="user-image">
+                <img id="userImage" src="user_image.png" alt="userimage" style="display: none;">
               </span>
             </div>
           </nav>
