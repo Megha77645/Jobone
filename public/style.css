@@ -317,7 +317,7 @@ a {
 .logout-access:hover {
   cursor: pointer;
 }
-.logout-access p{
+.logout-access a{
     color: rgb(40, 104, 243);
     font-weight: 600;
 }
@@ -1181,7 +1181,7 @@ body.modal-open .featured-jobs-section {
 .feedback-title {
         text-align: center;
         position: relative;
-        top: 60px;
+        /* top: 20px; */
         /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
       }
 
