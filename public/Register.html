@@ -137,35 +137,35 @@
   </form>
 
   <script>
-    const form = document.getElementById("signup-form");
-    const email = document.getElementById("input-email");
-    const password = document.getElementById("input-password");
-    const firstName = document.getElementById("input-firstname");
-    const lastName = document.getElementById("input-lastname");
+    // const form = document.getElementById("signup-form");
+    // const email = document.getElementById("input-email");
+    // const password = document.getElementById("input-password");
+    // const firstName = document.getElementById("input-firstname");
+    // const lastName = document.getElementById("input-lastname");
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      fetch("http://localhost:5000/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          name: `${firstName.value} ${lastName.value}`,
-          email: email.value,
-          password: password.value
-        })
-      })
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
-          alert(data.message || "Registration successful!");
-        })
-        .catch(error => {
-          console.error("Error:", error);
-          alert("Error occurred during registration");
-        });
+    //   fetch("http://localhost:5000/register", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json"
+    //     },
+    //     body: JSON.stringify({
+    //       name: `${firstName.value} ${lastName.value}`,
+    //       email: email.value,
+    //       password: password.value
+    //     })
+    //   })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //       console.log(data);
+    //       alert(data.message || "Registration successful!");
+    //     })
+    //     .catch(error => {
+    //       console.error("Error:", error);
+    //       alert("Error occurred during registration");
+    //     });
     });
     function showEmailSignupForm() {
       document.getElementById("section-btns").style.display = "none";

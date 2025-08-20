@@ -529,3 +529,57 @@ function login() {
 
     // Run when page loads
     window.onload = updateNavbar;
+
+
+
+    let users = JSON.parse(localStorage.getItem('users')) || {};
+    let currentUser = null;
+
+    //DOM Elements
+    const loginForm = document.getElementById("loginForm");
+    const signupform = document.getElementById("signup-form");
+
+
+    //LoginForm 
+    if(loginForm) {
+      loginForm.addEventListener('submit' , function(e) {
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        if(users[email] && users[email].password === password) {4
+          currentUser = email;
+          localStorage.setItem("currentUser" , email);
+
+          //profile
+
+        }
+        else {
+          alert("Invalid user and password");
+        }
+  
+      });
+    }
+
+
+    //Registration functionality
+    if(signupform) {
+      signupform.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = document.getElementById("input-email").value;
+        const password = document.getElementById("input-password").value;
+
+        if(users[email] ){
+          alert("Email already Registered");
+        }
+        else {
+          users [email] = {
+            password : password,
+            //profile complete
+          };
+          localStorage.setItem('users', JSON.stringify(users));
+          alert('Registration succesfull ! Please Login. ');
+          document.getElementById('signupform').reset();
+        }
+      });
+    }
