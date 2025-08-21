@@ -122,7 +122,7 @@
           <input type="text" placeholder="First Name" id="input-firstname" required>
           <input type="text" placeholder="Last Name" id="input-lastname" required>
         </div>
-        <button type="submit" id="submitButton" class="btn-submit-signup">Sign up</button>
+        <button type="submit" id="submitButton" class="btn-submit-signup" >Sign up</button>
       </div>
 
       <p class="text-terms">
@@ -137,14 +137,14 @@
   </form>
 
   <script>
-    // const form = document.getElementById("signup-form");
-    // const email = document.getElementById("input-email");
-    // const password = document.getElementById("input-password");
-    // const firstName = document.getElementById("input-firstname");
-    // const lastName = document.getElementById("input-lastname");
+    const form = document.getElementById("signup-form");
+    const email = document.getElementById("input-email");
+    const password = document.getElementById("input-password");
+    const firstName = document.getElementById("input-firstname");
+    const lastName = document.getElementById("input-lastname");
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+  //  form.addEventListener("submit", function (e) {
+  //     e.preventDefault();
 
     //   fetch("http://localhost:5000/register", {
     //     method: "POST",
@@ -166,7 +166,7 @@
     //       console.error("Error:", error);
     //       alert("Error occurred during registration");
     //     });
-    });
+    // });
     function showEmailSignupForm() {
       document.getElementById("section-btns").style.display = "none";
       document.getElementById("section-email-form").style.display = "flex";
@@ -176,8 +176,36 @@
       googleBtn.style.backgroundColor = "#007BFF";
       googleBtn.style.border = "1px solid #ccc";
     }
+
+
+
+
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // form reload ko rokna
+
+  const name = firstName.value + " " + lastName.value; 
+  const emailValue = email.value;
+  const passwordValue = password.value;
+
+  if(name && emailValue && passwordValue){
+    localStorage.setItem("userName", name);
+    localStorage.setItem("userEmail", emailValue);
+    localStorage.setItem("userPassword", passwordValue);
+
+    alert("Registered Successfully!");
+    window.location.href = "index.html";  // login page par bhej do
+  } else {
+    alert("Please enter all details");
+  }
+});
+
+
+
+
+
   </script>
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
 </body>
 
 </html>

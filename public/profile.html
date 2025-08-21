@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Steven Townsend - Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+
+<!-- Login Section -->
+<div id="login-box" style="text-align:center; padding:20px;">
+  <h2>Login</h2>
+  <input type="text" id="loginName" placeholder="Enter Name" required>
+  <input type="email" id="loginEmail" placeholder="Enter Email" required>
+  <input type="password" id="loginPassword" placeholder="Enter Password" required>
+  <button onclick="login()">Login</button>
+</div>
+
+
+<div id="profile-section" style="display:none;">
+   <!-- आपका पूरा profile page का code यहीं रहेगा -->
+
+<div class="container">
+    <!-- Cover Image -->
+    <div class="cover-img">
+        <img src="https://jobstack-shreethemes.vercel.app/assets/bg5-BQCe0yqf.jpg" alt="Cover" />
+    </div>
+    <!-- Profile Card -->
+    <div class="profile-card">
+        <div class="profile-img">
+            <img src="https://jobstack-shreethemes.vercel.app/assets/01--4QesCJS.jpg" alt="Steven Townsend" />
+        </div>
+        <div class="profile-info">
+            <h2>Steven Townsend</h2>
+            <p class="role">Web Designer</p>
+        </div>
+    </div>
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Left Section -->
+        <div class="left-section">
+            <div class="bio">
+                <h3>Steven Townsend</h3>
+                <p>
+                    Obviously I'M Web Developer. Web Developer with over 3 years of experience. Experienced with all stages of the development cycle for dynamic web projects. The as opposed to using 'Content here, content here', making it look like readable English.
+                </p>
+                <p>
+                    Data Structures and Algorithms are the heart of programming. Initially most of the developers do not realize its importance but when you will start your career in software development, you will find your code is either taking too much time or taking too much space.
+                </p>
+            </div>
+            <div class="skills-exp">
+                <h4>Skills :</h4>
+                <div class="skills-list">
+                    <div class="skill">
+                        <span>WordPress</span>
+                        <span>84%</span>
+                        <div class="progress"><div class="progress-bar" style="width:84%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML</span>
+                        <span>95%</span>
+                        <div class="progress"><div class="progress-bar" style="width:95%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <span>Photoshop</span>
+                        <span>70%</span>
+                        <div class="progress"><div class="progress-bar" style="width:70%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <span>JavaScript</span>
+                        <span>79%</span>
+                        <div class="progress"><div class="progress-bar" style="width:79%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <span>Figma</span>
+                        <span>85%</span>
+                        <div class="progress"><div class="progress-bar" style="width:85%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <span>Illustration</span>
+                        <span>65%</span>
+                        <div class="progress"><div class="progress-bar" style="width:65%"></div></div>
+                    </div>
+                </div>
+                <h4>Experience :</h4>
+                <div class="experience">
+                    <div class="exp-item">
+                        <div ><img src="https://jobstack-shreethemes.vercel.app/assets/shree-logo-Bd9DHJ8p.png" class="exp-icon"></div>
+                        <div class="exp-details">
+                            <span class="exp-duration">2019–22</span>
+                            <h5>Full Stack Developer</h5>
+                            <span class="exp-company">Shreethemes - India</span>
+                            <p>
+                                It seems that only fragments of the original text remain in the Lorem Ipsum texts used today. One may speculate that over the course of time certain letters were added or deleted at various positions within the text.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="exp-item">
+                        <div ><img src="https://jobstack-shreethemes.vercel.app/assets/circle-logo-De1zeqcD.png" class="exp-icon"></div>
+                        <div class="exp-details">
+                            <span class="exp-duration">2017–19</span>
+                            <h5>Back-end Developer</h5>
+                            <span class="exp-company">CircleCI - U.S.A.</span>
+                            <p>
+                                It seems that only fragments of the original text remain in the Lorem Ipsum texts used today. One may speculate that over the course of time certain letters were added or deleted at various positions within the text.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h4>Contact Me:</h4>
+                <form id="contactForm">
+                    <div class="row">
+                        <div class="col">
+                            <label>Your Name:</label>
+                            <input type="text" name="name" placeholder="Name :" required>
+                        </div>
+                        <div class="col">
+                            <label>Your Email:</label>
+                            <input type="email" name="email" placeholder="Email :" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-full">
+                            <label>Your Question:</label>
+                            <input type="text" name="subject" placeholder="Subject :" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-full">
+                            <label>Your Comment:</label>
+                            <textarea name="message" placeholder="Message :" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="personal-details">
+                <h4>Personal Detail:</h4>
+                <ul>
+                    <li><i class="fa fa-envelope"></i> Email : <span>thomas@mail.com</span></li>
+                    <li><i class="fa fa-calendar"></i> D.O.B. : <span>31st Dec, 1996</span></li>
+                    <li><i class="fa fa-home"></i>    Address : <span>15 Razy street</span></li>
+                    <li><i class="fa fa-location-dot"></i> City : <span>London</span></li>
+                    <li><i class="fa fa-globe"></i> Country : <span>UK</span></li>
+                    <li><i class="fa fa-mail-bulk"></i> Postal Code : <span>521452</span></li>
+                    <li><i class="fa fa-phone"></i> Mobile : <span>(+125) 1542–8452</span></li>
+                </ul>
+                <div class="social">
+                    <span>Social:</span>
+                    <a href="#"><i class="fa-brands fa-behance"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-envelope"></i></a>
+                </div>
+                <div class="cv-download">
+                    <div class="cv-file">
+                        <i class="fa fa-file"></i> calvin-carlo-resume.pdf
+                    </div>
+                    <a href="calvin-carlo-resume.pdf" class="btn download-btn" download>
+                        <i class="fa fa-download"></i> Download CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>// Contact Form Submission (demo only)
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for your message!');
+});
+
+
+// function login() {
+//     const name = document.getElementById("loginName").value;
+//     const email = document.getElementById("loginEmail").value;
+
+//     if(name && email){
+//       // Name और Email profile page में डाल दो
+//       document.querySelector(".profile-info h2").textContent = name;
+//       document.querySelector(".personal-details li:nth-child(1) span").textContent = email;
+
+//       // Login box hide और profile show
+//       document.getElementById("login-box").style.display = "none";
+//       document.getElementById("profile-section").style.display = "block";
+//     } else {
+//       alert("Please enter both Name and Email");
+//     }
+//   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function login(){
+  const savedName = localStorage.getItem("userName");
+  const savedEmail = localStorage.getItem("userEmail");
+  const savedPassword = localStorage.getItem("userPassword");
+
+  const name = document.getElementById("loginName").value;
+  const email = document.getElementById("loginEmail").value;
+  const password = document.getElementById("loginPassword").value;
+
+  if(name === savedName && email === savedEmail && password === savedPassword){
+    document.querySelector(".profile-info h2").textContent = savedName;
+    document.querySelector(".personal-details li:nth-child(1) span").textContent = savedEmail;
+    document.querySelector(".personal-details li:nth-child(2) span").textContent = savedPassword;
+
+    document.getElementById("login-box").style.display = "none";
+    document.getElementById("profile-section").style.display = "block";
+  } else {
+    alert("Invalid login details! Please register first.");
+  }
+}
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
