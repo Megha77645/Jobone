@@ -500,10 +500,24 @@ document.addEventListener("DOMContentLoaded", function () {
 const postJobLink = document.getElementById("postJobLink");
 
 function login() {
+  const savedName = localStorage.getItem("userName");
+  const savedEmail = localStorage.getItem("userEmail");
+  const savedPassword = localStorage.getItem("userPassword");
+
+  // const name = document.getElementById("loginName").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  if(email === savedEmail && password === savedPassword){
       localStorage.setItem("loggedIn", "true");
       updateNavbar();
       alert("You are now logged in ✅");
-    }
+  } else {
+    alert("Invalid login details! Please register first.");
+  }
+}
+
+    
 
     function logout() {
       localStorage.removeItem("loggedIn");
