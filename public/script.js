@@ -500,7 +500,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const postJobLink = document.getElementById("postJobLink");
 
 function login() {
-  const savedName = localStorage.getItem("userName");
+  // const savedName = localStorage.getItem("userName");
   const savedEmail = localStorage.getItem("userEmail");
   const savedPassword = localStorage.getItem("userPassword");
 
